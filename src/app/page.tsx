@@ -147,11 +147,13 @@ export default function Home() {
     <div className="min-h-screen gradient-bg relative">
       {/* Map Background */}
       <div
-        className="fixed inset-0 opacity-20 pointer-events-none z-0"
+        className="fixed inset-0 pointer-events-none"
         style={{
           backgroundImage: 'url(/map-background.svg)',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
+          opacity: 0.15,
+          zIndex: 0,
         }}
       />
       {/* Navigation */}
