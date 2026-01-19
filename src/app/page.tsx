@@ -134,7 +134,6 @@ const content = {
     },
     footer: {
       company: 'Zocalos Inc.',
-      location: 'A US C Corporation based in Texas, operating in Mexico.',
       rights: 'All rights reserved.',
     },
   },
@@ -283,7 +282,6 @@ export default function Home() {
             </div>
 
             <div className="text-center md:text-right text-gray-400">
-              <p className="mb-1">{t.footer.location}</p>
               <p>&copy; {new Date().getFullYear()} Zocalos Inc. {t.footer.rights}</p>
             </div>
           </div>
