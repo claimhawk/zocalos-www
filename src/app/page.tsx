@@ -161,9 +161,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
+              <img src="/logo.png" alt="Zocalos" className="w-10 h-10 rounded-xl" />
               <span className="text-2xl font-bold text-white">Zocalos</span>
             </div>
 
@@ -277,9 +275,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">Z</span>
-              </div>
+              <img src="/logo.png" alt="Zocalos" className="w-10 h-10 rounded-xl" />
               <span className="text-2xl font-bold">{t.footer.company}</span>
             </div>
 
