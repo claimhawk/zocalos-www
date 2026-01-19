@@ -66,8 +66,7 @@ const content = {
       ],
     },
     footer: {
-      company: 'Zocalos Inc.',
-      location: 'Una corporacion C de Estados Unidos con sede en Texas, operando en Mexico.',
+      company: 'Zocalos',
       rights: 'Todos los derechos reservados.',
     },
   },
@@ -146,27 +145,36 @@ export default function Home() {
   const t = content[lang];
 
   return (
-    <div className="min-h-screen gradient-bg">
+    <div className="min-h-screen gradient-bg relative">
+      {/* Map Background */}
+      <div
+        className="fixed inset-0 opacity-20 pointer-events-none z-0"
+        style={{
+          backgroundImage: 'url(/map-background.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      />
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1A1A2E]/95 backdrop-blur-md border-b border-[#2A2A40]">
         <div className="max-w-6xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <div className="w-10 h-10 gradient-primary rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <span className="text-2xl font-bold gradient-primary-text">Zocalos</span>
+              <span className="text-2xl font-bold text-white">Zocalos</span>
             </div>
 
             <div className="hidden md:flex items-center gap-8">
-              <a href="#features" className="text-gray-600 hover:text-gray-900 transition">{t.nav.about}</a>
-              <a href="#mission" className="text-gray-600 hover:text-gray-900 transition">{t.nav.mission}</a>
-              <a href="#team" className="text-gray-600 hover:text-gray-900 transition">{t.nav.team}</a>
+              <a href="#features" className="text-gray-300 hover:text-white transition">{t.nav.about}</a>
+              <a href="#mission" className="text-gray-300 hover:text-white transition">{t.nav.mission}</a>
+              <a href="#team" className="text-gray-300 hover:text-white transition">{t.nav.team}</a>
             </div>
 
             <button
               onClick={() => setLang(lang === 'es' ? 'en' : 'es')}
-              className="px-4 py-2 rounded-full border border-gray-200 hover:border-gray-300 transition flex items-center gap-2 text-sm font-medium"
+              className="px-4 py-2 rounded-full border border-gray-500 hover:border-gray-400 transition flex items-center gap-2 text-sm font-medium text-white"
             >
               <span>{lang === 'es' ? '🇺🇸' : '🇲🇽'}</span>
               <span>{lang === 'es' ? 'English' : 'Español'}</span>
@@ -193,30 +201,6 @@ export default function Home() {
           <button className="gradient-primary text-white font-semibold px-8 py-4 rounded-2xl text-lg shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
             {t.hero.cta}
           </button>
-
-          {/* Hero Visual */}
-          <div className="mt-16 relative">
-            <div className="animate-float">
-              <div className="w-full max-w-lg mx-auto bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                </div>
-                <div className="space-y-3">
-                  <div className="h-4 bg-gradient-to-r from-orange-200 to-red-200 rounded-full w-3/4"></div>
-                  <div className="h-4 bg-gray-100 rounded-full w-full"></div>
-                  <div className="h-4 bg-gray-100 rounded-full w-5/6"></div>
-                  <div className="grid grid-cols-2 gap-3 mt-6">
-                    <div className="h-20 bg-gradient-to-br from-orange-100 to-red-100 rounded-xl"></div>
-                    <div className="h-20 bg-gradient-to-br from-teal-100 to-emerald-100 rounded-xl"></div>
-                    <div className="h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-xl"></div>
-                    <div className="h-20 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 
